@@ -6,7 +6,11 @@ module.exports = {
     fontFamily: {
       sans: ['Epilogue', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'banner': "url('../images/portfolio-banner.svg')",
+      })
+    }
   },
   variants: {
     extend: {},

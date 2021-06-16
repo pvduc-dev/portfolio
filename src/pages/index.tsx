@@ -25,8 +25,10 @@ const IndexPage = () => {
 
   return (
     <>
-      <img src="/static/791438fdd949fa2ca97641d9cd7a19fb/portfolio-banner.svg" alt="test" className="w-[100vw] object-cover"/>
-      <div>Hello</div>
+      <div
+        className="bg-banner h-screen"
+      >
+      </div>
     </>
   );
 };
