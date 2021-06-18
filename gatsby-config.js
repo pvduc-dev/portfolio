@@ -55,11 +55,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-preload-fonts',
+    'gatsby-plugin-smoothscroll',
     {
-      resolve: 'gatsby-plugin-anchor-links',
+      resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: 0,
-      },
+        offset: -100
+      }
     },
     {
       resolve: `gatsby-plugin-react-svg`,
