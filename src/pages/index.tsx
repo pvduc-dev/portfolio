@@ -5,22 +5,6 @@ import { convertToBgImage } from 'gbimage-bridge';
 import Header from "../components/layout/Header"
 
 const IndexPage = () => {
-  const { backgroundImage } = useStaticQuery(
-    graphql`
-      query {
-        backgroundImage: file(relativePath: { eq: "portfolio-banner.png" }) {
-          id
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    `
-  );
-
-  const image = getImage(backgroundImage);
-  console.log(backgroundImage);
-  const bgImage = convertToBgImage(image);
 
   return (
     <>
