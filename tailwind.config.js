@@ -7,9 +7,9 @@ module.exports = {
       sans: ['Epilogue', 'sans-serif'],
     },
     extend: {
-      // backgroundImage: theme => ({
-      //   'banner': "url('../images/portfolio-banner.svg')",
-      // })
+      backgroundImage: theme => ({
+        'banner': "url('../images/portfolio-banner.svg')",
+      })
     }
   },
   variants: {
