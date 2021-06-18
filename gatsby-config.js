@@ -48,7 +48,7 @@ module.exports = {
           google: [
             {
               family: 'Epilogue',
-              variants: ['300', '400', '500', '600', '700'],
+              variants: ['300', '400', '500', '600', '700', '900'],
             },
           ],
         },
