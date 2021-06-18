@@ -1,12 +1,10 @@
 import * as React from 'react';
 import Header from "../components/layout/Header"
-import Seo from '../components/seo';
 
 const IndexPage = () => {
 
   return (
     <>
-      <Seo/>
       <Header/>
       <div
         className="bg-banner h-screen pt-[90px]"
@@ -29,8 +27,10 @@ const IndexPage = () => {
              Developer
           </span>
           </p>
-          <p>
-            Hello, I 'm Pv Duc
+          <p
+            className="mt-4 w-[30rem]"
+          >
+            Hello, I 'm Pv Duc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem commodi, doloremque eius eum facilis fugiat fugit id illo ipsa nostrum placeat possimus praesentium provident quaerat quam similique suscipit tempora tenetur totam! Adipisci dolor ea eveniet illo impedit ipsa laboriosam porro, quaerat quia, quos reiciendis sint sunt suscipit tenetur vel?
           </p>
         </div>
       </div>
