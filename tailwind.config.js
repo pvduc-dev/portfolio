@@ -9,6 +9,7 @@ module.exports = {
     },
     colors: {
       primary: '#1534B1',
+      accent: '#333'
     },
     extend: {
       backgroundImage: theme => ({

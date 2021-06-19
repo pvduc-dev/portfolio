@@ -13,11 +13,13 @@ const IndexPage = () => {
           className="max-w-6xl mx-auto"
         >
           <p
+            data-sal="slide-right"
             className="mt-[12rem] text-xl font-bold"
           >
             Hello, I 'm a
           </p>
           <p
+            data-sal="slide-right"
             className="mt-4 font-bold text-6xl"
           >
             Web&nbsp;

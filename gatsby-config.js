@@ -3,6 +3,7 @@ module.exports = {
     title: `Pv Duc resume`,
     description: `Landing page title`,
     author: `pvduc`,
+    siteUrl: 'https://pvduc.dev',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -70,5 +71,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
   ],
 };

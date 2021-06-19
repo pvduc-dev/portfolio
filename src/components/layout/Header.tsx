@@ -26,6 +26,7 @@ const Header: FC = () => (
     className="fixed w-full h-[90px] flex items-center"
   >
     <nav
+      data-sal="slide-right"
       className="ml-[42rem]"
     >
       <ul
@@ -34,7 +35,7 @@ const Header: FC = () => (
         {NAV_LINKS.map((link) => (
           <li
             key={link.to}
-            className="px-4 mx-2"
+            className="px-4 mx-2 text-accent"
           >
             <AnchorLink
               to={link.to}
