@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from "react"
 import Header from "../components/layout/Header"
 
 const IndexPage = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <section
         className="bg-banner h-screen pt-[90px]"
       >
@@ -38,21 +38,21 @@ const IndexPage = () => {
         <div
           className=""
         >
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>Name <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Email <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
+          <form
+            name="contact-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input name="name" placeholder="Your Name" type="text" />
+            <input name="email" placeholder="name@name.com" type="email" />
+            <textarea name="message" />
+            <button>Send</button>
           </form>
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
