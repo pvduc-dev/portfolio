@@ -26,7 +26,6 @@ const Header: FC = () => (
     className="fixed w-full h-[90px] flex items-center"
   >
     <nav
-      data-sal="slide-right"
       className="ml-[42rem]"
     >
       <ul
