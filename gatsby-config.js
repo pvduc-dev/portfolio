@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Pv Duc resume`,
     description: `Landing page title`,
     author: `pvduc`,
-    siteUrl: 'https://pvduc.dev',
+    siteUrl: process.env.GATSBY_SITE_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,13 +28,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-scroll-reveal',
     {
@@ -63,21 +62,15 @@ module.exports = {
         offset: -100
       }
     },
-    {
-      resolve: `gatsby-plugin-react-svg`,
-      options: {
-        rule: {
-          include: /images\/.*\.svg$/,
-        }
-      }
-    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-173226688-1",
+        trackingId: process.env.GA_TRACKING_ID,
         head: false,
+        anonymize: true,
+        respectDNT: true,
       },
     },
   ],

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "gatsby": "^3.6.2",
     "gatsby-background-image": "^1.5.3",
     "gatsby-plugin-anchor-links": "^1.2.1",
