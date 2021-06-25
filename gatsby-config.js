@@ -73,5 +73,6 @@ module.exports = {
         respectDNT: true,
       },
     },
+    `gatsby-plugin-offline`
   ],
 };
