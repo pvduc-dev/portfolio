@@ -21,12 +21,13 @@ module.exports = {
       white: '#FFF',
       black: '#333',
       primary: '#1534B1',
+      secondary: '#D2D9F3',
       accent: '#333'
     },
     extend: {
       backgroundImage: theme => ({
         'banner': "url('https://res.cloudinary.com/pv-duc/image/upload/v1624210477/portfolio-banner.svg')",
       })
-    }
+    },
   },
 };

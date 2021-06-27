@@ -1,6 +1,8 @@
 import * as React from "react"
 import Header from "../components/layout/Header"
 import Seo from "../components/layout/SEO"
+import ContactCard from "../components/contact/ContactCard"
+import ContactForm from "../components/contact/ContactForm"
 
 const IndexPage = () => {
 
@@ -13,6 +15,7 @@ const IndexPage = () => {
       <Header />
       <main>
         <section
+          id="hello"
           className="bg-banner bg-auto h-screen bg-no-repeat pt-[4.5rem]"
         >
           <div
@@ -44,6 +47,7 @@ const IndexPage = () => {
         </section>
         <section
           className=""
+          id="about-me"
         >
           <div
             className="container"
@@ -57,6 +61,9 @@ const IndexPage = () => {
               className="flex flex-wrap"
             >
               <div
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease"
                 className="w-full lg:w-1/2 flex justify-center"
               >
                 <article>
@@ -80,6 +87,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section
+          id="contact"
           className="my-12"
         >
           <div
@@ -90,6 +98,23 @@ const IndexPage = () => {
             >
               Contact
             </h2>
+            <div
+              className="flex flex-wrap"
+            >
+              <div
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+                className="w-full lg:w-1/2"
+              >
+                <ContactCard/>
+              </div>
+              <div
+                className="w-full lg:w-1/2"
+              >
+                <ContactForm/>
+              </div>
+            </div>
           </div>
         </section>
       </main>

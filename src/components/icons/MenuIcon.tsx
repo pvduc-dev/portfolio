@@ -1,10 +1,6 @@
 import * as React from 'react';
-import { forwardRef, LegacyRef, PropsWithRef } from 'react';
-
-interface IconProps extends PropsWithRef<any> {
-  color?: string;
-  size?: string | number;
-}
+import { forwardRef, LegacyRef } from 'react';
+import { IconProps } from "../../interfaces/icon-props"
 
 const MenuIcon = forwardRef<SVGSVGElement, IconProps>(
   (

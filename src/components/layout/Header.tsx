@@ -8,16 +8,16 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const NAV_LINKS = [
   {
-    title: 'About',
-    to: '/#about',
+    title: 'Hello',
+    to: '/#hello',
   },
   {
-    title: 'Portfolio',
-    to: '/#portfolio',
+    title: 'About me',
+    to: '/#about-me',
   },
   {
     title: 'Contact',
-    to: '/page-2',
+    to: '/#contact',
   },
   {
     title: 'Blog',
