@@ -2,8 +2,8 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Pv Duc resume`,
-    description: `Landing page title`,
+    title: `Pv Duc 's resume`,
+    description: `Hello, i 'm Pv Duc. High level experience in web design and development knowledge, producing quality work.`,
     author: `pvduc`,
     siteUrl: process.env.GATSBY_SITE_URL,
   },

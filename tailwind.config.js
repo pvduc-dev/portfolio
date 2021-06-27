@@ -18,6 +18,8 @@ module.exports = {
       },
     },
     colors: {
+      white: '#FFF',
+      black: '#333',
       primary: '#1534B1',
       accent: '#333'
     },
@@ -27,8 +29,4 @@ module.exports = {
       })
     }
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };
