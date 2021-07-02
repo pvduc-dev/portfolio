@@ -45,6 +45,10 @@
         background: rgba(150, 150, 150, 0.9);
     }
 
+    body {
+        background-color: #F0FCFA;
+    }
+
     h1 {
         @apply text-4xl md:text-6xl;
         @apply font-bold;

@@ -12,8 +12,12 @@ const NAV_LINKS = [
     to: '/#hello',
   },
   {
-    title: 'About me',
+    title: 'About',
     to: '/#about-me',
+  },
+  {
+    title: 'Skills',
+    to: '/#skills',
   },
   {
     title: 'Contact',
@@ -62,6 +66,7 @@ const Header: FC = () => {
                 <AnchorLink
                   to={link.to}
                   title={link.title}
+                  stripHash
                 />
               </li>
             ))}

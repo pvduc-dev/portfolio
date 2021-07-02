@@ -12,10 +12,10 @@ const contact = {
 const ContactCard = () => {
   return (
     <div
-      className="px-8 py-12 rounded-lg bg-white shadow-lg"
+      className="px-8 lg:mx-8 py-12 rounded-lg bg-white shadow-lg"
     >
       <div
-        className="flex items-center"
+        className="flex items-center my-4"
       >
         <div
           className="inline-block p-2 rounded-full bg-secondary text-primary"
@@ -30,7 +30,7 @@ const ContactCard = () => {
       </div>
 
       <div
-        className="flex items-center"
+        className="flex items-center my-4"
       >
         <div
           className="inline-block p-2 rounded-full bg-secondary text-primary"
@@ -41,6 +41,20 @@ const ContactCard = () => {
           className="ml-4"
         >
           Me Tri, Nam Tu Liem, Hanoi
+        </span>
+      </div>
+      <div
+        className="flex items-center my-4"
+      >
+        <div
+          className="inline-block p-2 rounded-full bg-secondary text-primary"
+        >
+          <LocationIcon />
+        </div>
+        <span
+          className="ml-4"
+        >
+          +84865707906
         </span>
       </div>
     </div>

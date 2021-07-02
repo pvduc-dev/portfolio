@@ -3,6 +3,7 @@ import Header from "../components/layout/Header"
 import Seo from "../components/layout/SEO"
 import ContactCard from "../components/contact/ContactCard"
 import ContactForm from "../components/contact/ContactForm"
+import SkillList from "../components/skill/SkillList"
 
 const IndexPage = () => {
 
@@ -74,6 +75,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section
+          id="skills"
           className="my-12"
         >
           <div
@@ -82,8 +84,9 @@ const IndexPage = () => {
             <h2
               className="my-6 text-center text-primary"
             >
-              Skill
+              Skills
             </h2>
+            <SkillList/>
           </div>
         </section>
         <section
@@ -94,7 +97,7 @@ const IndexPage = () => {
             className="container"
           >
             <h2
-              className="my-6 text-center text-primary"
+              className="my-8 text-center text-primary"
             >
               Contact
             </h2>
@@ -102,9 +105,8 @@ const IndexPage = () => {
               className="flex flex-wrap"
             >
               <div
-                data-sal="slide-up"
+                data-sal="slide-right"
                 data-sal-delay="300"
-                data-sal-easing="ease"
                 className="w-full lg:w-1/2"
               >
                 <ContactCard/>

@@ -33,7 +33,13 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     'gatsby-plugin-postcss',
-    'gatsby-plugin-scroll-reveal',
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        once: false, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+      }
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
