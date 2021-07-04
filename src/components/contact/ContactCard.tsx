@@ -25,14 +25,14 @@ const ContactCard = () => {
   return (
     <div className="flex justify-center items-center rounded-lg bg-white shadow-lg">
       <div
-        className=""
+        className="py-6"
       >
         {contactProperties.map(({key, value, icon}) => {
           const Icon = icon;
           return (
             <div
               key={key}
-              className="flex items-center my-4"
+              className="flex items-center py-3"
             >
               <div className="inline-block p-2 rounded-full bg-secondary text-primary">
                 <Icon/>

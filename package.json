@@ -8,6 +8,7 @@
     "@atlaskit/drawer": "^6.0.8",
     "@react-aria/button": "^3.3.2",
     "@react-aria/textfield": "^3.3.0",
+    "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "gatsby": "^3.6.2",
     "gatsby-background-image": "^1.5.3",

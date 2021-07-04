@@ -76,7 +76,7 @@ const IndexPage = () => {
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-32"
             >
-              {/*<ContactForm/>*/}
+              <ContactForm/>
               <div
                 data-sal="slide-right"
                 data-sal-delay="300"

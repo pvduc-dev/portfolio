@@ -61,7 +61,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-preload-fonts',
-    'gatsby-plugin-smoothscroll',
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {

@@ -42,7 +42,10 @@ const TextField: FC<TextFieldProps> = props => {
   return (
     <div>
       <Label htmlFor={id}>{label}</Label>
-      <Input type="text" />
+      <Input
+        type="text"
+        {...inputProps}
+      />
     </div>
   );
 };
