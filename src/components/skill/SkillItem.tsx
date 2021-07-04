@@ -5,30 +5,41 @@ interface SKillItemProps {
   index: number;
   title: string,
   subtitle: string;
+  image: string;
 }
 
-const SkillItem: FC<SKillItemProps> = (props) => {
-  const animationDelay = props.index * 100;
+const SkillItem: FC<SKillItemProps> = ({index, title, image, subtitle}) => {
   return (
     <div
-      className="flex-1 max-w-[350px] min-w-[315px]"
+      data-sal="slide-right"
+      data-sal-delay={index * 200}
+      data-sal-easing="ease"
+      className="my-4 px-4 py-8 bg-white rounded-md shadow-lg"
     >
-      <div
-        data-sal="slide-up"
-        data-sal-delay={animationDelay}
-        data-sal-easing="ease"
-        className="my-4 px-4 py-6 bg-white rounded-md shadow-lg"
-      >
-        <div>
+      <div>
+        <div
+          className="flex justify-center"
+        >
+          <img
+            src={image}
+            alt={title}
+            width="80"
+            height="80"
+            className="w-[5rem] h-[5rem]"
+          />
+        </div>
+        <div
+          className="mx-auto mt-8 w-[20rem] lg:w-[14rem] xl:w-[16rem]"
+        >
           <h3
             className="text-center text-black font-bold"
           >
-            {props.title}
+            {title}
           </h3>
           <p
-            className="mt-4 text-sm"
+            className="mt-2"
           >
-            {props.subtitle}
+            {subtitle}
           </p>
         </div>
       </div>

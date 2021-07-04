@@ -47,34 +47,6 @@ const IndexPage = () => {
           </div>
         </section>
         <section
-          className=""
-          id="about-me"
-        >
-          <div
-            className="container"
-          >
-            <h2
-              className="my-6 text-center text-primary"
-            >
-              About me
-            </h2>
-            <div
-              className="flex flex-wrap"
-            >
-              <div
-                data-sal="slide-up"
-                data-sal-delay="300"
-                data-sal-easing="ease"
-                className="w-full lg:w-1/2 flex justify-center"
-              >
-                <article>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad possimus quae quisquam ratione similique tenetur ut. Aspernatur consectetur expedita ipsa natus numquam omnis perferendis vero voluptatibus. Alias corporis cupiditate dolor earum, eius eos expedita facilis fugiat illo ipsa laboriosam magnam maiores molestiae officia possimus qui quibusdam sed sint soluta suscipit? Animi architecto assumenda autem, beatae eos exercitationem nulla perferendis praesentium quas soluta suscipit ut, voluptates. Blanditiis dignissimos earum laudantium placeat.</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
           id="skills"
           className="my-12"
         >
@@ -91,30 +63,25 @@ const IndexPage = () => {
         </section>
         <section
           id="contact"
-          className="my-12"
+          className="my-12 bg-primary"
         >
           <div
             className="container"
           >
             <h2
-              className="my-8 text-center text-primary"
+              className="my-8 text-center text-white"
             >
               Contact
             </h2>
             <div
-              className="flex flex-wrap"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-32"
             >
+              {/*<ContactForm/>*/}
               <div
                 data-sal="slide-right"
                 data-sal-delay="300"
-                className="w-full lg:w-1/2"
               >
                 <ContactCard/>
-              </div>
-              <div
-                className="w-full lg:w-1/2"
-              >
-                <ContactForm/>
               </div>
             </div>
           </div>

@@ -1,40 +1,29 @@
 import * as React from 'react';
-import { forwardRef } from 'react';
+import { FC } from 'react';
 import { IconProps } from '../../interfaces/icon-props';
 
-const EmailIcon = forwardRef<SVGSVGElement, IconProps>(({ color= 'currentColor', size = 24 }, ref) => (
+const EmailIcon: FC<IconProps> = ({ color = 'currentColor', size = 24 }) => (
   <svg
-    ref={ref}
+    id="email"
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
-    viewBox="0 0 24 24"
     fill={color}
+    viewBox="0 0 24 24"
   >
-    <g id="Group_20" data-name="Group 20" transform="translate(-129 -114)">
-      <rect
-        id="Rectangle_5"
-        data-name="Rectangle 5"
-        width="24"
-        height="24"
-        transform="translate(129 114)"
-        fill="none"
-      />
-      <g id="email" transform="translate(129 49)">
-        <path
-          id="Path_69"
-          data-name="Path 69"
-          d="M21.188,68H2.813A2.816,2.816,0,0,0,0,70.813v12a2.816,2.816,0,0,0,2.813,2.813H21.188A2.816,2.816,0,0,0,24,82.813v-12A2.816,2.816,0,0,0,21.188,68Zm.938,14.813a.939.939,0,0,1-.937.938H2.813a.939.939,0,0,1-.937-.937v-12a.939.939,0,0,1,.938-.937H21.188a.939.939,0,0,1,.938.938Z"
-        />
-        <path
-          id="Path_70"
-          data-name="Path 70"
-          d="M40.573,92.937l-9.966,7.413-9.966-7.413-1.119,1.5,11.085,8.245,11.085-8.245Z"
-          transform="translate(-18.607 -23.768)"
-        />
-      </g>
-    </g>
+    <rect
+      id="Rectangle_5"
+      data-name="Rectangle 5"
+      width="24"
+      height="24"
+      opacity="0"
+    />
+    <path
+      id="Path_70"
+      data-name="Path 70"
+      d="M18.15,4H4.85A2.85,2.85,0,0,0,2,6.85v9.5A2.85,2.85,0,0,0,4.85,19.2h13.3A2.85,2.85,0,0,0,21,16.35V6.85A2.85,2.85,0,0,0,18.15,4Zm-.636,1.9L11.5,10.412,5.486,5.9Zm.636,11.4H4.85a.95.95,0,0,1-.95-.95V7.087l7.03,5.273a.95.95,0,0,0,1.14,0L19.1,7.087V16.35A.95.95,0,0,1,18.15,17.3Z"
+      transform="translate(1)"
+    />
   </svg>
-));
-
+);
 export default EmailIcon;

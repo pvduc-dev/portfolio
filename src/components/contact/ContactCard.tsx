@@ -1,64 +1,49 @@
-import * as React from "react"
-import EmailIcon from "../icons/EmailIcon"
-import PlaceholderIcon from "../icons/PlaceholderIcon"
-import LocationIcon from "../icons/LocationIcon"
+import * as React from 'react';
+import EmailIcon from '../icons/EmailIcon';
+import LocationIcon from '../icons/LocationIcon';
+import PhoneIcon from '../icons/PhoneIcon';
 
-const contact = {
-  address: 'Me Tri, Nam Tu Liem, Hanoi.',
-  phone: '+84865707906',
-  email: 'pvduc.dev@gmail.com'
-}
+const contactProperties = [
+  {
+    key: 'email',
+    value: 'pvduc.dev@gmail.com',
+    icon: EmailIcon,
+  },
+  {
+    key: 'phone',
+    value: '+84 86 570 7906',
+    icon: PhoneIcon,
+  },
+  {
+    key: 'address',
+    value: 'Me Tri, Nam Tu Liem, Hanoi, Vietnam.',
+    icon: LocationIcon,
+  },
+];
 
 const ContactCard = () => {
   return (
-    <div
-      className="px-8 lg:mx-8 py-12 rounded-lg bg-white shadow-lg"
-    >
+    <div className="flex justify-center items-center rounded-lg bg-white shadow-lg">
       <div
-        className="flex items-center my-4"
+        className=""
       >
-        <div
-          className="inline-block p-2 rounded-full bg-secondary text-primary"
-        >
-          <EmailIcon />
-        </div>
-        <span
-          className="ml-4"
-        >
-          pvduc.dev@gmail.com
-        </span>
-      </div>
-
-      <div
-        className="flex items-center my-4"
-      >
-        <div
-          className="inline-block p-2 rounded-full bg-secondary text-primary"
-        >
-          <LocationIcon />
-        </div>
-        <span
-          className="ml-4"
-        >
-          Me Tri, Nam Tu Liem, Hanoi
-        </span>
-      </div>
-      <div
-        className="flex items-center my-4"
-      >
-        <div
-          className="inline-block p-2 rounded-full bg-secondary text-primary"
-        >
-          <LocationIcon />
-        </div>
-        <span
-          className="ml-4"
-        >
-          +84865707906
-        </span>
+        {contactProperties.map(({key, value, icon}) => {
+          const Icon = icon;
+          return (
+            <div
+              key={key}
+              className="flex items-center my-4"
+            >
+              <div className="inline-block p-2 rounded-full bg-secondary text-primary">
+                <Icon/>
+              </div>
+              <span className="ml-4">{value}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactCard
+export default ContactCard;

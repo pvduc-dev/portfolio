@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { FC, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Button from "../shared/Button"
 import MenuIcon from "../icons/MenuIcon"
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import Drawer from '@atlaskit/drawer';
 
 const NAV_LINKS = [
   {
@@ -23,17 +24,18 @@ const NAV_LINKS = [
     title: 'Contact',
     to: '/#contact',
   },
-  {
-    title: 'Blog',
-    to: 'https://blog.pvduc.dev',
-  },
 ];
 
 const Header: FC = () => {
   const [isDrawer, setIsDrawer] = useState<boolean>(false);
 
   function menuPressHandler() {
-    setIsDrawer(prevState => !prevState);
+    setIsDrawer(true);
+  }
+
+  function drawerCloseHandler() {
+    setIsDrawer(false)
+    debugger;
   }
 
   return (
@@ -82,6 +84,10 @@ const Header: FC = () => {
             <MenuIcon/>
           </Button>
         </div>
+        <Drawer
+          isOpen={isDrawer}
+          onClose={drawerCloseHandler}
+        />
       </div>
     </header>
   );
