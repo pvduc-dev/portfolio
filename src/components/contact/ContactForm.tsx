@@ -40,23 +40,28 @@ const ContactForm = () => {
     $event: FormEvent<HTMLFormElement>
   ): Promise<void> {
     $event.preventDefault();
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-      })
-    });
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        })
+      });
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   return (
     <form
       onSubmit={submitHandler}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <TextField
         label="Your name"
         name="name"
