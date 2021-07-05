@@ -55,10 +55,6 @@ const ContactForm = () => {
 
   return (
     <form
-      method="POST"
-      data-netlify="true"
-      data-netlify-recaptcha="true"
-      name="contact"
       onSubmit={submitHandler}
     >
       <TextField
