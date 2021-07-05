@@ -45,7 +45,7 @@ const ContactForm = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-          'form-name': 'contact-us',
+          'form-name': 'contact',
           name: name,
           email: email,
           subject: subject,
