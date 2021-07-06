@@ -61,6 +61,7 @@ const ContactForm = () => {
     <form
       name="contact"
       data-netlify="true"
+      data-netlify-recaptcha="true"
       method="POST"
       onSubmit={submitHandler}
     >
