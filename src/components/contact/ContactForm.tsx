@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChangeEvent, FormEvent, useRef, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import TextField from '../shared/TextField';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -16,8 +16,11 @@ const ContactForm = () => {
   const [email, setEmail] = useState<string>('');
   const [subject, setSubject] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [recaptchaResponse, setRecaptchaResponse] = useState<string | null>(null);
 
-  function captchaChangeHandler(data) {}
+  function captchaChangeHandler(data: string): void {
+    setRecaptchaResponse(data)
+  }
 
   function nameChangeHandler(value: string): void {
     console.log(value)
@@ -49,7 +52,8 @@ const ContactForm = () => {
           name: name,
           email: email,
           subject: subject,
-          message: message
+          message: message,
+          'g-recaptcha-response': recaptchaResponse,
         })
       });
     } catch (e) {

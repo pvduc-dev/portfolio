@@ -64,4 +64,11 @@
     h4 {
         @apply text-base;
     }
+
+    button {
+        @apply outline-none;
+        @apply bg-primary;
+        @apply text-white;
+        @apply rounded-lg;
+    }
 }
