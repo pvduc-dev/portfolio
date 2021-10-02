@@ -1,108 +1,65 @@
-import * as React from 'react';
-import { FormEvent, useState } from 'react';
+import * as React from "react"
+import { yupResolver } from "@hookform/resolvers/yup"
+import { object, string } from "yup"
 
-import TextField from '../shared/TextField';
-import ReCAPTCHA from 'react-google-recaptcha';
-import Button from '../shared/Button';
+import ReCAPTCHA from "react-google-recaptcha"
+import Button from "../common/Button"
+import { Contact } from "../../interfaces/contact"
+import { useForm } from "react-hook-form"
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
 
 const ContactForm = () => {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [subject, setSubject] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
-  const [recaptchaResponse, setRecaptchaResponse] = useState<string | null>(null);
 
-  function captchaChangeHandler(data: string): void {
-    setRecaptchaResponse(data)
+  const contactSchema = object().shape({
+    name: string().required().label("Name"),
+    email: string().required().email().label("Email"),
+    subject: string().required().label("Subject"),
+    message: string().required().label("Message"),
+    captchaToken: string().required(),
+  })
+
+  const { handleSubmit, register, setValue, formState: { errors } } = useForm({ mode: "onTouched", resolver: yupResolver(contactSchema) })
+
+  const recaptchaChangeHandler = (value) => {
+    setValue("captchaToken", value)
   }
 
-  function nameChangeHandler(value: string): void {
-    console.log(value)
-    setName(value);
-  }
-
-  function emailChangeHandler(value: string): void {
-    setEmail(value);
-  }
-
-  function subjectChangeHandler(value: string): void {
-    setSubject(value);
-  }
-
-  function messageChangeHandler(value: string): void {
-    setMessage(value);
-  }
-
-  async function submitHandler(
-    $event: FormEvent<HTMLFormElement>
-  ): Promise<void> {
-    $event.preventDefault();
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-          'g-recaptcha-response': recaptchaResponse,
-        })
-      });
-    } catch (e) {
-      console.log(e)
-    }
+  async function onSubmit(contact: Contact): Promise<void> {
   }
 
   return (
     <form
       name="contact"
-      data-netlify="true"
-      data-netlify-recaptcha="true"
-      method="POST"
-      onSubmit={submitHandler}
+      onSubmit={handleSubmit(onSubmit)}
+      className="px-6"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <TextField
-        label="Your name"
-        name="name"
-        value={name}
-        onChange={nameChangeHandler}
-      />
-      <TextField
-        label="Your email"
-        name="email"
-        value={email}
-        onChange={emailChangeHandler}
-      />
-      <TextField
-        label="Subjects"
-        name="subject"
-        value={subject}
-        onChange={subjectChangeHandler}
-      />
-      <TextField
-        label="Your message"
-        name="message"
-        value={message}
-        onChange={messageChangeHandler}
-      />
-      <div className="mt-4">
+      <div className="mb-1">
+        <label className="text-secondary text-sm" htmlFor="name">Your name</label>
+        <input name="name" placeholder="Pv Duc" id="name" type="text" className="py-[0.625rem] px-3 bg-white rounded-md placeholder-gray-400 text-gray-900 appearance-none inline-block w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        <p className="text-error text-xs mt-2 min-h-4 message">{errors.name?.message}</p>
+      </div>
+      <div className="mb-1">
+        <label className="text-secondary text-sm" htmlFor="name">Your email</label>
+        <input name="name" id="name" type="text" className="py-[0.625rem] px-3 bg-white rounded-md placeholder-gray-400 text-gray-900 appearance-none inline-block w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        <p className="text-error text-xs mt-2 min-h-4 message">{errors.name?.message}</p>
+      </div>
+      <div className="mb-1">
+        <label className="text-secondary text-sm" htmlFor="name">Subject</label>
+        <input name="name" id="name" type="text" className="py-[0.625rem] px-3 bg-white rounded-md placeholder-gray-400 text-gray-900 appearance-none inline-block w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        <p className="text-error text-xs mt-2 min-h-4 message">{errors.name?.message}</p>
+      </div>
+      <div
+        className="mb-2"
+      >
         <ReCAPTCHA
           sitekey={process.env.GATSBY_RECAPTCHA_KEY}
-          onChange={captchaChangeHandler}
+          onChange={recaptchaChangeHandler}
         />
       </div>
       <Button type="submit">Submit</Button>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

@@ -17,7 +17,7 @@ const IndexPage = () => {
       <main>
         <section
           id="hello"
-          className="bg-banner bg-auto h-screen bg-no-repeat pt-[4.5rem]"
+          className="bg-banner bg-cover h-screen bg-no-repeat pt-[4.5rem]"
         >
           <div
             className="container"
@@ -63,7 +63,7 @@ const IndexPage = () => {
         </section>
         <section
           id="contact"
-          className="my-12 bg-primary"
+          className="py-12 bg-primary"
         >
           <div
             className="container"

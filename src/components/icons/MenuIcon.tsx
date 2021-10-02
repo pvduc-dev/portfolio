@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { forwardRef, LegacyRef } from 'react';
-import { IconProps } from "../../interfaces/icon-props"
+import { Icon } from "../../interfaces/icon"
 
-const MenuIcon = forwardRef<SVGSVGElement, IconProps>(
+const MenuIcon = forwardRef<SVGSVGElement, Icon>(
   (
     { color = 'currentColor', size = 24, ...rest },
     ref: LegacyRef<SVGSVGElement>

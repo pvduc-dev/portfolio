@@ -35,7 +35,9 @@ const ContactCard = () => {
               className="flex items-center py-3"
             >
               <div className="inline-block p-2 rounded-full bg-secondary text-primary">
-                <Icon/>
+                <Icon
+                  size={18}
+                />
               </div>
               <span className="ml-4">{value}</span>
             </div>

@@ -18,11 +18,13 @@ module.exports = {
       },
     },
     colors: {
+      transparent: 'transparent',
       white: '#FFF',
       black: '#333',
       primary: '#1534B1',
       secondary: '#D2D9F3',
-      accent: '#333'
+      accent: '#333',
+      error: '#ff5252'
     },
     extend: {
       backgroundImage: theme => ({
@@ -30,4 +32,9 @@ module.exports = {
       })
     },
   },
+  variants: {
+    extend: {
+
+    }
+  }
 };
