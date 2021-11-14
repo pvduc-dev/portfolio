@@ -42,7 +42,7 @@ const IndexPage = () => {
                 className="mt-6"
               >
                 High level experience in web design and development knowledge, producing quality work.
-                <a href="https://res.cloudinary.com/pv-duc/image/upload/v1636895705/picture.png"></a>
+                <a href="https://res.cloudinary.com/pv-duc/image/upload/v1636895705/picture.png">Avatar</a>
               </h4>
             </article>
           </div>
