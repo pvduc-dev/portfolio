@@ -64,7 +64,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "preload-fonts": "gatsby-preload-fonts",
-    "prebuild": "yarnp reload-fonts"
+    "prebuild": "yarn reload-fonts"
   },
   "repository": {
     "type": "git",
