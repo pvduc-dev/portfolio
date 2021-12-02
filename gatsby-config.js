@@ -36,8 +36,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        once: true, // Defines if animation needs to be launched once
+        once: false, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
+        rootMargin: '5% 5%',
       }
     },
     {
@@ -78,6 +79,7 @@ module.exports = {
         respectDNT: true,
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-recaptcha`
   ],
 };

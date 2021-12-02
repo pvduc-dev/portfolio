@@ -26,11 +26,6 @@ module.exports = {
       accent: '#333',
       error: '#ff5252'
     },
-    extend: {
-      backgroundImage: theme => ({
-        'banner': "url('https://res.cloudinary.com/pv-duc/image/upload/v1624210477/portfolio-banner.svg')",
-      })
-    },
   },
   variants: {
     extend: {

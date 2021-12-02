@@ -17,7 +17,8 @@ const IndexPage = () => {
       <main>
         <section
           id="hello"
-          className="bg-banner bg-cover h-screen bg-no-repeat pt-[4.5rem]"
+          className="bg-cover h-screen bg-no-repeat pt-[4.5rem]"
+          style={{backgroundImage: 'url(static/portfolio-banner.svg)'}}
         >
           <div
             className="container"

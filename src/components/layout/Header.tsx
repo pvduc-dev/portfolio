@@ -55,7 +55,7 @@ const Header: FC = () => {
                 key={link.to}
                 className="px-4 mx-2 flex items-center text-accent"
               >
-                <AnchorLink to={link.to} title={link.title} stripHash />
+                <AnchorLink className={link.title} to={link.to} title={link.title} stripHash />
               </li>
             ))}
           </ul>

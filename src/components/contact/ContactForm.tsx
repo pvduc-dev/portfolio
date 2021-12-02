@@ -2,9 +2,7 @@ import * as React from "react"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { object, string } from "yup"
 
-import ReCAPTCHA from "react-google-recaptcha"
 import Button from "../common/Button"
-import { Contact } from "../../interfaces/contact"
 import { useForm } from "react-hook-form"
 
 
@@ -18,19 +16,11 @@ const ContactForm = () => {
     captchaToken: string().required(),
   })
 
-  const { handleSubmit, register, setValue, formState: { errors } } = useForm({ mode: "onTouched", resolver: yupResolver(contactSchema) })
-
-  const recaptchaChangeHandler = (value) => {
-    setValue("captchaToken", value)
-  }
-
-  async function onSubmit(contact: Contact): Promise<void> {
-  }
+  const { formState: { errors } } = useForm({ mode: "onTouched", resolver: yupResolver(contactSchema) })
 
   return (
     <form
       name="contact"
-      onSubmit={handleSubmit(onSubmit)}
       className="px-6"
     >
       <input type="hidden" name="form-name" value="contact" />
@@ -52,10 +42,8 @@ const ContactForm = () => {
       <div
         className="mb-2"
       >
-        <ReCAPTCHA
-          sitekey={process.env.GATSBY_RECAPTCHA_KEY}
-          onChange={recaptchaChangeHandler}
-        />
+        <div className="g-recaptcha" data-sitekey={process.env.GATSBY_RECAPTCHA_KEY}>
+        </div>
       </div>
       <Button type="submit">Submit</Button>
     </form>
