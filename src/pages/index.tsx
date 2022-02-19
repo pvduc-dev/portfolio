@@ -26,11 +26,11 @@ const IndexPage = () => {
             <article
               className="mt-8 lg:mt-[12rem]"
             >
-              <h3>
+              <h3 className="text-[#E5E7EB]">
                 Hello, i 'm Pv Duc
               </h3>
               <h1
-                className="mt-2"
+                className="mt-2 text-[#E5E7EB]"
               >
                 Web&nbsp;
                 <span
@@ -40,10 +40,9 @@ const IndexPage = () => {
                 </span>
               </h1>
               <h4
-                className="mt-6"
+                className="mt-6 text-[#E5E7EB]"
               >
                 High level experience in web design and development knowledge, producing quality work.
-                <a href="https://res.cloudinary.com/pv-duc/image/upload/v1636895705/picture.png">Avatar</a>
               </h4>
             </article>
           </div>
@@ -56,7 +55,7 @@ const IndexPage = () => {
             className="container"
           >
             <h2
-              className="my-6 text-center text-primary"
+              className="my-6 text-center text-[#5A6DFF]"
             >
               Skills
             </h2>
@@ -65,7 +64,7 @@ const IndexPage = () => {
         </section>
         <section
           id="contact"
-          className="py-12 bg-primary"
+          className="py-12 bg-[#171D4F]"
         >
           <div
             className="container"

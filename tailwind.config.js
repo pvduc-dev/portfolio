@@ -4,7 +4,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Epilogue', 'sans-serif'],
+      sans: ['Helvetica Neue', 'sans-serif'],
       inter: ['Inter', 'sans-serif']
     },
     container: {

@@ -23,7 +23,7 @@ const contactProperties = [
 
 const ContactCard = () => {
   return (
-    <div className="flex justify-center items-center rounded-lg bg-white shadow-lg">
+    <div className="flex justify-center items-center rounded-md bg-[#0F0D1E]">
       <div
         className="py-6"
       >
@@ -39,7 +39,7 @@ const ContactCard = () => {
                   size={18}
                 />
               </div>
-              <span className="ml-4">{value}</span>
+              <span className="ml-4 text-white ">{value}</span>
             </div>
           )
         })}

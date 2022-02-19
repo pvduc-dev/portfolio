@@ -14,30 +14,22 @@ const SkillItem: FC<SKillItemProps> = ({index, title, image, subtitle}) => {
       data-sal="slide-right"
       data-sal-delay={index * 200}
       data-sal-easing="ease"
-      className="my-4 px-4 py-8 bg-white rounded-md shadow-lg"
+      className="px-4 bg-[#0F0D1E] rounded-md"
     >
       <div>
         <div
-          className="flex justify-center"
+          className="mx-auto py-1.5 w-[20rem] lg:w-[14rem] xl:w-[16rem]"
         >
-          <img
-            src={image}
-            alt={title}
-            width="80"
-            height="80"
-            className="w-[5rem] h-[5rem]"
-          />
-        </div>
-        <div
-          className="mx-auto mt-8 w-[20rem] lg:w-[14rem] xl:w-[16rem]"
-        >
-          <h3
-            className="text-center text-black font-bold"
-          >
-            {title}
-          </h3>
+          <div className="py-3.5 border-none border-b border-[#1D1A32]">
+            <h3
+              className="text-center text-[#E5E7EB] font-bold"
+            >
+              {title}
+            </h3>
+          </div>
+          <hr className="border-none border border-white"/>
           <p
-            className="mt-2"
+            className="text-[#84809F]"
           >
             {subtitle}
           </p>

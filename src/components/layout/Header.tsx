@@ -49,11 +49,11 @@ const Header: FC = () => {
           </Link>
         </div>
         <nav className="ml-[42rem] hidden md:block">
-          <ul className="h-full flex font-semibold">
+          <ul className="h-full flex font-medium">
             {NAV_LINKS.map(link => (
               <li
                 key={link.to}
-                className="px-4 mx-2 flex items-center text-accent"
+                className="px-4 mx-2 flex items-center text-[#E5E7EB]"
               >
                 <AnchorLink className={link.title} to={link.to} title={link.title} stripHash />
               </li>
