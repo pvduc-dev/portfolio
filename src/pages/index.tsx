@@ -4,6 +4,7 @@ import Seo from "../components/layout/SEO"
 import ContactCard from "../components/contact/ContactCard"
 import ContactForm from "../components/contact/ContactForm"
 import SkillList from "../components/skill/SkillList"
+import Card from "../components/contact/Card";
 
 const IndexPage = () => {
 
@@ -70,20 +71,15 @@ const IndexPage = () => {
             className="container"
           >
             <h2
-              className="my-8 text-center text-white"
+              className="my-8 text-center text-[#E5E7EB]"
             >
               Contact
             </h2>
             <div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-32"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12"
             >
-              <ContactForm/>
-              <div
-                data-sal="slide-right"
-                data-sal-delay="300"
-              >
-                <ContactCard/>
-              </div>
+              <Card/>
+              <Card/>
             </div>
           </div>
         </section>
