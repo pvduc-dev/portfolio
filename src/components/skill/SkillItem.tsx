@@ -5,34 +5,40 @@ interface SKillItemProps {
   index: number;
   title: string,
   subtitle: string;
-  image: string;
+  thumbnail: any;
 }
 
-const SkillItem: FC<SKillItemProps> = ({index, title, image, subtitle}) => {
+const SkillItem: FC<SKillItemProps> = ({index, title, thumbnail, subtitle}) => {
+  const Thumbnail = thumbnail;
   return (
     <div
       data-sal="slide-right"
       data-sal-delay={index * 200}
       data-sal-easing="ease"
-      className="px-4 bg-[#0F0D1E] rounded-md"
+      className="bg-[#0F0D1E] rounded-md"
     >
       <div>
         <div
-          className="mx-auto py-1.5 w-[20rem] lg:w-[14rem] xl:w-[16rem]"
+          className="py-1.5"
         >
-          <div className="py-3.5 border-none border-b border-[#1D1A32]">
-            <h3
-              className="text-center text-[#E5E7EB] font-bold"
-            >
-              {title}
-            </h3>
-          </div>
-          <hr className="border-none border border-white"/>
-          <p
-            className="text-[#84809F]"
+          <div
+            className="px-4 py-3 text-[#E5E7EB] font-medium"
           >
-            {subtitle}
-          </p>
+            {title}
+          </div>
+          <hr className="border-[#1B182F]"/>
+          <div
+            className="px-4 py-2 text-[#84809F]"
+          >
+            <div
+              className="p-6"
+            >
+              <Thumbnail/>
+            </div>
+            <div className="py-3">
+              {subtitle}
+            </div>
+          </div>
         </div>
       </div>
     </div>
