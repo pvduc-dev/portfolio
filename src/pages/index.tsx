@@ -63,9 +63,10 @@ const IndexPage = () => {
             <SkillList/>
           </div>
         </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#171D4F" fill-opacity="1" d="M0,96L48,96C96,96,192,96,288,117.3C384,139,480,181,576,176C672,171,768,117,864,112C960,107,1056,149,1152,170.7C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         <section
           id="contact"
-          className="py-12 bg-[#171D4F]"
+          className="py-3 bg-[#171D4F]"
         >
           <div
             className="container"
@@ -78,7 +79,6 @@ const IndexPage = () => {
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-12"
             >
-              <Card/>
               <Card/>
             </div>
           </div>
