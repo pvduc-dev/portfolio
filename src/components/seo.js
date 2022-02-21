@@ -51,7 +51,7 @@ function Seo({ description, lang, meta, title, siteUrl }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: 'Pv Duc Developer',
         },
         {
           property: `og:image`,
