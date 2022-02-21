@@ -54,6 +54,10 @@ function Seo({ description, lang, meta, title, siteUrl }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: 'https://pvduc.dev/static/29a5fa780c79f718c256a7be0480b30d/f31ef/logo.png',
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
