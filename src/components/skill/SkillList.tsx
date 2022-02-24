@@ -24,7 +24,7 @@ const SkillList = () => {
   ];
   return (
     <div
-      className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 xl:gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 xl:gap-8"
     >
       {skills.map((skill, index) => (
         <SkillItem

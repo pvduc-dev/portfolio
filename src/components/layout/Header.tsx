@@ -36,7 +36,7 @@ const Header: FC = () => {
   }
 
   return (
-    <header className="w-full fixed top-0 z-30">
+    <header className="w-full fixed top-0 z-30 border-b border-white border-opacity-10 bg-black bg-opacity-5 backdrop-blur">
       <div className="h-[4.5rem] px-4 md:px-6 lg:px-8 flex">
         <div className="flex-none flex items-center">
           <Link to="/" aria-label="Home">

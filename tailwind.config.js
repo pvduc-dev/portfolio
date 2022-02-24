@@ -14,7 +14,7 @@ module.exports = {
         sm: '2rem',
         lg: '4rem',
         xl: '6rem',
-        '2xl': '16rem',
+        '2xl': '8rem',
       },
     },
     colors: {

@@ -16,6 +16,7 @@ const SkillItem: FC<SKillItemProps> = ({index, title, thumbnail, subtitle}) => {
       data-sal-delay={index * 200}
       data-sal-easing="ease"
       className="bg-[#0F0D1E] rounded-md"
+      style={{aspectRatio: '17/10'}}
     >
       <div>
         <div
